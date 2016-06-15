@@ -1,16 +1,28 @@
 $(document).ready(function() {
-	var calculationList= [];
+	var calculationList= "";
 	$(".button").on('click', function(event) {
 		var clickVal = $(this).val();
 		if (clickVal === "=") {
 			calculate(calculationList); 
 		}
-		console.log(clickVal);
-		calculationList.push($(this).val());
+		else if (clickVal === "AC") {
+			calculationList = "";
+			displayNumbers(calculationList);
+		}
+		else {
+			calculationList+=clickVal;
+			displayNumbers(calculationList);
+		}
+		
+		
 		
 	});
 
 	function calculate(list) {
-		console.log(calculationList)
+		console.log(eval(calculationList));
+		$(".textbox").html(eval(calculationList));
+	}
+	function displayNumbers(calculationList) {
+		$(".textbox").html(calculationList);
 	}	
 });
