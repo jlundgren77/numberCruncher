@@ -1,7 +1,8 @@
 body {
-  background-color: blue;
-  heigth: 100%;
-  width: 100%; }
+  background-color: #D8D8D8;
+  height: 100%;
+  width: 100%;
+  font-family: 'Open Sans', sans-serif; }
 
 .calculator {
   width: 400px;
@@ -14,7 +15,19 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  border-radius: 5px;
+  border: 2px solid #8D8D8D;
+  -webkit-box-shadow: -2px 6px 5px -1px #0e0e0f;
+  -moz-box-shadow: -2px 6px 5px -1px #0e0e0f;
+  box-shadow: -2px 6px 5px -1px #0e0e0f; }
+
+button {
+  background-color: #444444;
+  color: #D8D8D8; }
+
+.red_button {
+  background-color: #BD637C; }
 
 .buttons {
   width: 250px;
@@ -24,14 +37,42 @@ body {
   float: left;
   width: 57.5px;
   height: 50px;
-  margin: 2px; }
+  margin: 2px;
+  border: none; }
+
+#header {
+  margin-bottom: 100px;
+  width: 100%; }
+
+#logo {
+  float: left;
+  margin-right: 20px;
+  width: 25%;
+  font-size: 18px; }
+
+#solarPanel {
+  float: left;
+  margin: 20px;
+  width: 30%;
+  height: 25px;
+  background-color: #452D28;
+  border-radius: 15px; }
+
+#brand {
+  float: left;
+  margin-left: 20px;
+  width: 25%;
+  font-size: 12px; }
 
 .textbox {
   margin: 5px;
-  border: 1px solid #000;
+  background-color: #D4E2E3;
+  color: #0E0E0f;
+  border: 10px solid #858587;
   height: 25px;
   margin: 0 auto;
   text-align: right;
-  width: 270px; }
+  width: 270px;
+  padding: 5px; }
 
 /*# sourceMappingURL=application.css.map */
