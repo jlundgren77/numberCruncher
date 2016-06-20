@@ -9,6 +9,13 @@ $(document).ready(function() {
 			calculationList = "";
 			displayNumbers(calculationList);
 		}
+		else if (clickVal == "CE") {
+			calculationList = calculationList.slice(0, -1);
+			displayNumbers(calculationList);
+		}
+		else if(clickVal === "Ans") {
+			calculationList = $(".textbox").html();
+		}
 		else {
 			calculationList+=clickVal;
 			displayNumbers(calculationList);
@@ -19,8 +26,9 @@ $(document).ready(function() {
 	});
 
 	function calculate(list) {
-		console.log(eval(calculationList));
-		$(".textbox").html(eval(calculationList));
+		var evalulation = eval(list);
+		$(".textbox").html(evalulation);
+		calculationList = evalulation;
 	}
 	function displayNumbers(calculationList) {
 		$(".textbox").html(calculationList);

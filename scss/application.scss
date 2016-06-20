@@ -1,13 +1,23 @@
+$red_button: #BD637C;
+$light_grey: #D8D8D8;
+$medium_grey: #8D8D8D;
+$dark_grey: #444444;
+$black: #0E0E0f;
+$brown: #452D28;
+$blueish_grey: #D4E2E3;
+$border: #858587;
+
 body {
-	background-color: blue;
-	heigth: 100%;
+	background-color: $light_grey;
+	height: 100%;
 	width: 100%;
+	font-family: 'Open Sans', sans-serif;
 }
 
 .calculator {
 	width: 400px;
 	height: 450px;
-	background-color: white;
+	background-color: lighten($light_grey, 25%);
 	padding: 5px;
 	text-align: center;
 	margin: auto;
@@ -16,14 +26,26 @@ body {
 	left: 0;
 	right: 0;
 	bottom: 0;
+	border-radius: 5px;
+	border: 2px solid $medium_grey;
+	-webkit-box-shadow: -2px 6px 5px -1px rgba(14,14,15,1);
+	-moz-box-shadow: -2px 6px 5px -1px rgba(14,14,15,1);
+	box-shadow: -2px 6px 5px -1px rgba(14,14,15,1);
 }
 
-
+button {
+	 background-color: $dark_grey;
+	 color: $light_grey;
+}
+.red_button {
+	background-color: $red_button;
+}
 
 .buttons {
-
+   
 	width: 250px;
 	margin: 10px auto;
+
 }
 
 .button {
@@ -31,13 +53,46 @@ body {
 	width: 57.5px;
 	height: 50px;
 	margin: 2px;
+	border: none;
+
+}
+#header {
+	margin-bottom: 100px;
+	width: 100%;
+
+}
+
+#logo {
+	float: left;
+	margin-right: 20px;
+	width: 25%;
+	font-size: 18px;
+}
+
+#solarPanel {
+	float: left;
+    margin: 20px;
+	width: 30%;
+	height: 25px;
+	background-color: $brown;
+	border-radius: 15px;
+}
+#brand {
+	float: left;
+	margin-left: 20px;
+	width: 25%;
+	font-size: 12px;
 }
 
 .textbox {
 	margin: 5px;
-	border: 1px solid #000;
+	background-color: $blueish_grey;
+	color: $black;
+	border: 10px solid $border;
 	height: 25px;
 	margin: 0 auto;
 	text-align: right;
 	width: 270px;
+	padding: 5px;
+
 }
